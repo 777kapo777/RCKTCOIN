@@ -1,15 +1,16 @@
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 import express from 'express';
+import { join } from 'path';
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Раздача статических файлов из текущей папки или из папки "public"
-app.use(express.static(__dirname));
+// Отдаем статические файлы из папки сборки
+app.use(express.static(join(process.cwd(), 'dist')));
+
+// Любой запрос возвращает index.html (для SPA)
+app.get('*', (req, res) => {
+  res.sendFile(join(process.cwd(), 'dist', 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
