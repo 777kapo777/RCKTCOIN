@@ -127,7 +127,7 @@ function App() {
       <section id="buy" className="py-20 bg-slate-800/50 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">{t.buy.title}</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <a 
               href="https://pump.fun/board"
               target="_blank"
@@ -142,22 +142,6 @@ function App() {
               <h3 className="text-2xl font-bold mb-4">Pump.fun</h3>
               <p className="text-gray-300">
                 {t.buy.pumpFun.description}
-              </p>
-            </a>
-            <a 
-              href="https://t.me/blum/app?startapp=memepadjetton"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-slate-700/50 p-8 rounded-2xl backdrop-blur-sm hover:bg-slate-700/70 transition cursor-pointer"
-            >
-              <img 
-                src="https://i.ibb.co/7xV2WQ7F/blum.png" 
-                alt="Blum" 
-                className="w-12 h-12 mb-4"
-              />
-              <h3 className="text-2xl font-bold mb-4">Blum</h3>
-              <p className="text-gray-300">
-                {t.buy.blum.description}
               </p>
             </a>
             <div className="bg-slate-700/50 p-8 rounded-2xl backdrop-blur-sm">
